@@ -1,0 +1,26 @@
+{
+  "name": "Claude Code - AI-Powered Development Assistant",
+  "description": "Enable Claude to help with your development workflow. Mention @claude in issues or PR comments to: convert issues into pull requests with full implementation, suggest and apply code changes, review code, answer technical questions, and more. Supports Anthropic API, AWS Bedrock, and Google Vertex AI.",
+  "iconName": "claude-code",
+  "categories": [
+    "Code Quality",
+    "Continuous Integration",
+    "Code Review",
+    "Automation",
+    "AI/ML",
+    "Pull Request Management",
+    "Issue Management"
+  ],
+  "filePatterns": [
+    "package.json",
+    "pom.xml",
+    "build.gradle",
+    "*.csproj",
+    "go.mod",
+    "Cargo.toml",
+    "requirements.txt",
+    "Gemfile",
+    "composer.json",
+    "CLAUDE.md"
+  ]
+}
