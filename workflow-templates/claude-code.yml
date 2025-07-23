@@ -28,6 +28,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Authenticate to Google Cloud
+        id: gcp-auth
         uses: google-github-actions/auth@v2
         with:
           workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}
@@ -47,3 +48,6 @@ jobs:
           use_vertex: "true"
           timeout_minutes: "60"
           github_token: ${{ steps.app-token.outputs.token }}
+        env:
+          ANTHROPIC_VERTEX_PROJECT_ID: ${{ steps.gcp-auth.outputs.project_id }}
+          CLOUD_ML_REGION: us-east5
