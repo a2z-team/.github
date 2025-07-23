@@ -24,12 +24,15 @@ jobs:
       issues: write
       id-token: write
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v2
         with:
           workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}
           service_account: ${{ secrets.GCP_CLAUDE_ASSISTANT_SERVICE_ACCOUNT }}
-      
+
       - name: Generate GitHub App token
         id: app-token
         uses: actions/create-github-app-token@v2
