@@ -44,5 +44,3 @@ jobs:
           use_vertex: "true"
           timeout_minutes: "60"
           github_token: ${{ steps.app-token.outputs.token }}
-        permissions:
-          id-token: write
